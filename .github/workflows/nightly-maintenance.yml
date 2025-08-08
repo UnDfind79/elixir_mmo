@@ -1,0 +1,23 @@
+name: Nightly Maintenance
+
+on:
+  schedule:
+    - cron: "23 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.18.4'
+          otp-version: '27.0.1'
+
+      - run: mix local.hex --force && mix local.rebar --force
+      - run: mix deps.get
+      - run: MIX_ENV=test mix test --color
+      - run: mix credo --strict
+      - run: mix dialyzer
