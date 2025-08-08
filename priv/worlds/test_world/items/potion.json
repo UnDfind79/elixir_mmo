@@ -1,0 +1,10 @@
+{
+  "id": "potion",
+  "type": "consumable",
+  "rarity": "common",
+  "stack_size": 5,
+  "description": "Restores a small amount of health.",
+  "tags": [
+    "healing"
+  ]
+}

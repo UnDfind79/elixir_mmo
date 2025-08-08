@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.1",
+  "world_id": "test_world",
+  "name": "Test Realm",
+  "description": "A sandbox world used for automated testing.",
+  "version": "0.1-alpha",
+  "entry_zone": "zone_root",
+  "spawn_point": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "initial_weather": "clear",
+  "pvp_enabled": false,
+  "allow_respawn": true,
+  "max_players": 10,
+  "features": {
+    "loot": true,
+    "crafting": false,
+    "myth": true,
+    "schemas": true,
+    "augments": true
+  },
+  "paths": {
+    "zones": "zones/",
+    "props": "props/",
+    "npcs": "npcs/",
+    "schemas": "schemas/",
+    "abilities": "abilities/",
+    "augments": "augments/",
+    "items": "items/",
+    "loot": "loot/",
+    "myth": "myth/",
+    "quests": "quests/"
+  },
+  "tags": ["prototype", "testbed", "automated"],
+  "seed": 101
+}

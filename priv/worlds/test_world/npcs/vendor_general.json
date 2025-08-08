@@ -1,0 +1,41 @@
+{
+  "id": "vendor_general",
+  "type": "vendor",
+  "family": "merchant_human",
+  "variant": "general_trader",
+  "name": "General Trader",
+  "role": "vendor",
+  "dialog_id": "vendor_general_dialog",
+  "inventory": ["flask", "twine", "needle"],
+  "interactions": [
+    {
+      "type": "dialog",
+      "target": "vendor_general_dialog"
+    },
+    {
+      "type": "trade",
+      "target": "default"
+    }
+  ],
+  "appearance": {
+    "model": "npcs/human_merchant_a.glb",
+    "skin": "tan",
+    "outfit": "merchant",
+    "scale": 1.0
+  },
+  "behavior": {
+    "type": "vendor",
+    "schedule": [
+      {
+        "time": "day",
+        "location": "market_square"
+      },
+      {
+        "time": "night",
+        "location": "merchant_home"
+      }
+    ]
+  },
+  "tags": ["merchant", "vendor", "friendly"],
+  "faction": "settlers"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "glyph_wall",
+  "active_in": [
+    "zone_cave"
+  ],
+  "effects": {
+    "enable_entity": [
+      "glyph_wall"
+    ],
+    "visual_overlay": "glow_glyphs"
+  },
+  "triggers": [
+    "time_night",
+    "quest:delve_deeper_started"
+  ]
+}

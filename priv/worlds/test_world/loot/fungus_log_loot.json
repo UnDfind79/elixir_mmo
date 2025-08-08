@@ -1,0 +1,17 @@
+{
+  "id": "fungus_log_loot",
+  "entries": [
+    {
+      "item": "dark_cap",
+      "chance": 0.8,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "item": "spore_dust",
+      "chance": 0.3,
+      "min": 1,
+      "max": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "herb_patch",
+  "type": "harvest",
+  "footprint": "1x1",
+  "collision_shape": {
+    "type": "circle",
+    "radius": 0.5
+  },
+  "theme_tags": ["herb", "natural", "cave"],
+  "placement_group": "plant_small",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/herb_patch_a.glb",
+  "yields": [
+    "green_leaf",
+    "bitter_root"
+  ]
+}

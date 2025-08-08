@@ -1,0 +1,12 @@
+{
+  "id": "bitter_root",
+  "type": "ingredient",
+  "rarity": "uncommon",
+  "stack_size": 99,
+  "description": "A root with a pungent flavor used in potions.",
+  "tags": [
+    "herb",
+    "alchemy",
+    "ingredient"
+  ]
+}

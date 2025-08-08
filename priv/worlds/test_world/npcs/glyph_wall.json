@@ -1,0 +1,27 @@
+{
+  "id": "glyph_wall",
+  "type": "interactable",
+  "subtype": "trigger",
+  "name": "Ancient Glyph Wall",
+  "description": "An ancient wall covered in glowing glyphs that react to nearby presence.",
+  "model": "interactables/glyph_wall_a.glb",
+  "tags": ["ancient", "glyph", "puzzle", "cave"],
+  "interaction": {
+    "msid": "cave_symbols",
+    "msid_trigger": "zone_event_trigger",
+    "glyphs": [
+      "glyph_a",
+      "glyph_b",
+      "glyph_c"
+    ],
+    "sigils": [
+      "sigil_x",
+      "sigil_y"
+    ],
+    "dialog": "glyph_wall_dialog"
+  },
+  "conditions": {
+    "time": "any",
+    "myth": []
+  }
+}

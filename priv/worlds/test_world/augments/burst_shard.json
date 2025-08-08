@@ -1,0 +1,23 @@
+{
+  "id": "burst_shard",
+  "description": "AOE enhancer",
+  "effects": {
+    "on_schema": {
+      "ability_mod": {
+        "area": true
+      },
+      "notes": "Converts single-target to small AOE"
+    },
+    "on_equipment": {
+      "modifiers": {
+        "resist_fire": 0.15
+      },
+      "notes": "Grants bonus fire resistance"
+    }
+  },
+  "tags": [
+    "aoe",
+    "burn",
+    "dualfocus"
+  ]
+}

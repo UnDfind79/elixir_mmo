@@ -1,0 +1,30 @@
+{
+  "id": "fear_aura",
+  "type": "passive",
+  "core": "aura",
+  "form": "mental",
+  "essence": "fear",
+  "modifiers": ["terror"],
+  "effects": [
+    {
+      "type": "status_aura",
+      "status": "fear",
+      "radius": 3,
+      "interval": 2,
+      "duration": 4
+    }
+  ],
+  "resonant_effects": {
+    "fear": {
+      "description": "Extends fear duration by 1s",
+      "effect": {
+        "fear_duration_mult": 1.2
+      }
+    }
+  },
+  "tags": ["control", "support", "passive", "schema"],
+  "description": "Radiates fear, causing nearby enemies to occasionally flee.",
+  "visuals": {
+    "effect": "dark_aura"
+  }
+}

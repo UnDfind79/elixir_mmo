@@ -1,0 +1,48 @@
+{
+  "id": "fireball",
+  "type": "active",
+  "core": "projectile",
+  "form": "explosion",
+  "essence": "fire",
+  "modifiers": ["burn"],
+  "effects": [
+    {
+      "type": "damage",
+      "element": "fire",
+      "amount": 25,
+      "shape": {
+        "type": "circle",
+        "radius": 2
+      }
+    },
+    {
+      "type": "status",
+      "status": "burn",
+      "duration": 6
+    }
+  ],
+  "resonant_effects": {
+    "fire": {
+      "description": "Increases burn duration by 2s",
+      "effect": {
+        "burn_duration_mult": 1.25
+      }
+    },
+    "area": {
+      "description": "Increases blast radius by 50%",
+      "effect": {
+        "radius_mult": 1.5
+      }
+    }
+  },
+  "cooldown": 6,
+  "cost": {
+    "mana": 20
+  },
+  "range": 8,
+  "tags": ["ranged", "caster", "aoe", "schema"],
+  "description": "Launches a fireball that explodes on impact, burning all nearby enemies.",
+  "visuals": {
+    "effect": "fire_explosion"
+  }
+}

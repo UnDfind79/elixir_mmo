@@ -1,0 +1,22 @@
+{
+  "id": "sigil_unlock",
+  "title": "Unlock the Sigil",
+  "goals": [
+    "Solve sigil puzzle",
+    "Touch altar"
+  ],
+  "rewards": [
+    {
+      "type": "item",
+      "id": "healing_tonic"
+    }
+  ],
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "herb_patch",
+      "count": 3
+    }
+  ],
+  "zone": "root"
+}

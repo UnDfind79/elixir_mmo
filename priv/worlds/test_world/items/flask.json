@@ -1,0 +1,10 @@
+{
+  "id": "flask",
+  "type": "container",
+  "rarity": "common",
+  "stack_size": 10,
+  "description": "Used to hold potions or liquids.",
+  "tags": [
+    "utility"
+  ]
+}

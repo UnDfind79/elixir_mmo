@@ -1,0 +1,25 @@
+{
+  "id": "starter_quest",
+  "title": "Gather Healing Herbs",
+  "goals": [
+    {
+      "type": "collect",
+      "item": "green_leaf",
+      "quantity": 2
+    }
+  ],
+  "rewards": [
+    {
+      "type": "item",
+      "id": "healing_tonic"
+    }
+  ],
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "herb_patch",
+      "count": 3
+    }
+  ],
+  "zone": "root"
+}

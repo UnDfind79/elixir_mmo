@@ -1,0 +1,39 @@
+{
+  "id": "torchbearer_guardian",
+  "family": "torchbearers",
+  "type": "npc",
+  "name": "Guardian of Flame",
+  "tags": ["guardian", "elite", "flame", "hostile"],
+  "description": "A searing presence deep within the cavern, born of ancient fire rites.",
+  "appearance": {
+    "model": "npcs/torchbearer_guardian.glb",
+    "scale": 1.15,
+    "effects": ["ember_trail"]
+  },
+  "behavior": {
+    "hostile": true,
+    "combat_style": "bruiser",
+    "aggro_range": 8,
+    "patrol": false
+  },
+  "stats": {
+    "level": 5,
+    "health": 220,
+    "armor": 15,
+    "resistances": {
+      "fire": 0.75,
+      "ice": -0.25,
+      "poison": 0
+    }
+  },
+  "abilities": [
+    "torch_slam",
+    "ember_barrier"
+  ],
+  "loot_table": {
+    "torch_core": 0.6,
+    "ember_shard": 0.3,
+    "coal_fragment": 1.0
+  },
+  "schema_affinity": ["flame", "defense"]
+}

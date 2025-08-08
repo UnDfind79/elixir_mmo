@@ -1,0 +1,62 @@
+{
+  "zone_id": "zone_cave",
+  "name": "Shimmerroot Caverns",
+  "tags": ["underground", "dungeon", "hostile"],
+  "type": "hostile",
+  "discoverable": true,
+  "seed": 204,
+  "weather": ["damp", "misting"],
+  "music": "deep_cave_theme",
+  "lights": ["bioluminescent_fungi"],
+  "quests": ["delve_deeper"],
+  "dialogs": ["glyph_wall_dialog"],
+  "terrain": {
+    "overrides": []
+  },
+  "noise": {
+    "ground": {
+      "octaves": 3,
+      "scale": 0.6
+    },
+    "structure": {
+      "octaves": 4,
+      "scale": 1.2
+    }
+  },
+  "entity_spawns": [
+    {
+      "ref": "glyph_wall.json",
+      "zone_id": "zone_cave",
+      "x": 6,
+      "y": 0,
+      "z": 12,
+      "orientation": 90,
+      "conditions": {
+        "time": "any",
+        "myth": []
+      }
+    },
+    {
+      "ref": "torchbearer_guardian.json",
+      "zone_id": "zone_cave",
+      "x": 10,
+      "y": 0,
+      "z": 14,
+      "orientation": 180,
+      "conditions": {
+        "time": "any",
+        "myth": ["flame_stirs"]
+      }
+    }
+  ],
+  "elements": [
+    {
+      "ref": "basic_portal",
+      "position": [3, 0, 1]
+    },
+    {
+      "ref": "starter_chest",
+      "position": [5, 0, 2]
+    }
+  ]
+}

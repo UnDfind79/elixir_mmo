@@ -1,0 +1,17 @@
+{
+  "id": "forest_cuirass",
+  "slot": "body",
+  "armor": 8,
+  "encumbrance": 4,
+  "stat_modifiers": {
+    "max_health": 20,
+    "resist_poison": 0.15
+  },
+  "augment_slots": 2,
+  "quality": "uncommon",
+  "tags": [
+    "nature",
+    "resist",
+    "crafted"
+  ]
+}

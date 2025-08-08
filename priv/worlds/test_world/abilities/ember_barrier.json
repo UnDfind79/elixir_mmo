@@ -1,0 +1,23 @@
+{
+  "id": "ember_barrier",
+  "source": "npc",
+  "type": "active",
+  "core": "defense",
+  "form": "barrier",
+  "essence": "fire",
+  "modifiers": ["resist_fire", "reflect_damage"],
+  "cooldown": 12,
+  "duration": 10,
+  "effects": {
+    "resistance": {
+      "type": "fire",
+      "value": 0.5
+    },
+    "reflection": {
+      "type": "fire",
+      "percentage": 0.25
+    }
+  },
+  "visual": "fiery_aura",
+  "tags": ["npc", "buff", "defense", "fire"]
+}

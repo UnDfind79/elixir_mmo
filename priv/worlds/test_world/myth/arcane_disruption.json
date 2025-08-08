@@ -1,0 +1,18 @@
+{
+  "id": "arcane_disruption",
+  "active_in": [
+    "zone_tower"
+  ],
+  "effects": {
+    "spawn_npc": [
+      "rune_sentinel"
+    ],
+    "disable_props": [
+      "scroll_table_anchor_01"
+    ]
+  },
+  "triggers": [
+    "myth_flavor_arcana",
+    "zone_event_triggered"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fungus_log",
+  "type": "harvest",
+  "footprint": "2x1",
+  "collision_shape": {
+    "type": "box",
+    "width": 2,
+    "height": 1
+  },
+  "theme_tags": ["fungus", "log", "cave"],
+  "placement_group": "natural_debris",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/fungus_log_a.glb",
+  "yields": [
+    "dark_cap",
+    "spore_dust"
+  ]
+}

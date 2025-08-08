@@ -1,0 +1,30 @@
+{
+  "id": "silence_field",
+  "type": "active",
+  "npc_only": true,
+  "core": "area",
+  "form": "pulse",
+  "essence": "arcane",
+  "modifiers": ["silence"],
+  "effects": [
+    {
+      "type": "status",
+      "status": "silenced",
+      "duration": 6,
+      "shape": {
+        "type": "circle",
+        "radius": 3
+      }
+    }
+  ],
+  "cooldown": 12,
+  "cost": {
+    "mana": 35
+  },
+  "range": 6,
+  "tags": ["control", "aoe", "npc"],
+  "description": "Emits a silencing wave, preventing ability use for affected targets.",
+  "visuals": {
+    "effect": "arcane_silence_pulse"
+  }
+}

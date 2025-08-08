@@ -1,0 +1,11 @@
+{
+  "id": "needle",
+  "type": "tool",
+  "rarity": "common",
+  "stack_size": 20,
+  "description": "Useful for stitching and fine crafting.",
+  "tags": [
+    "tool",
+    "crafting"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "torchbearer_guardian_loot",
+  "entries": [
+    {
+      "item": "spore_dust",
+      "chance": 1.0,
+      "min": 2,
+      "max": 4
+    }
+  ]
+}

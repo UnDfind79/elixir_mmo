@@ -1,0 +1,11 @@
+{
+  "id": "sword",
+  "type": "weapon",
+  "rarity": "common",
+  "stack_size": 1,
+  "description": "Basic sword for adventurers.",
+  "tags": [
+    "melee",
+    "starter"
+  ]
+}

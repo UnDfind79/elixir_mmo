@@ -1,0 +1,19 @@
+{
+  "id": "rune_sentinel",
+  "type": "monster",
+  "family": "constructs",
+  "name": "Sentinel of Runes",
+  "hostile": true,
+  "abilities": ["arcane_blast", "silence_field"],
+  "appearance": {
+    "model": "npcs/rune_sentinel.glb",
+    "animation_set": "construct_guard"
+  },
+  "behavior": {
+    "aggressive": true,
+    "guard_radius": 4,
+    "activation_conditions": {
+      "active_quest": "tower_riddle"
+    }
+  }
+}

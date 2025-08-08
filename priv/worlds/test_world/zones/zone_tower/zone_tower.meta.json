@@ -1,0 +1,69 @@
+{
+  "zone_id": "zone_tower",
+  "name": "Tower of Knowing",
+  "tags": ["tall", "arcane", "enigmatic"],
+  "type": "hostile",
+  "discoverable": true,
+  "seed": 303,
+  "weather": ["storm", "fog"],
+  "music": "tower_theme",
+  "lights": ["blue_orbs"],
+  "quests": ["tower_riddle"],
+  "dialogs": ["arcane_echoes_dialog"],
+  "terrain": {
+    "overrides": []
+  },
+  "noise": {
+    "ground": {
+      "octaves": 3,
+      "scale": 0.5
+    },
+    "structure": {
+      "octaves": 4,
+      "scale": 1.0
+    }
+  },
+  "inhabitants": [
+    {
+      "ref": "ghost_scholar.json",
+      "zone_id": "zone_tower",
+      "x": 9,
+      "y": 0,
+      "z": 9,
+      "orientation": 270,
+      "conditions": {
+        "time": ["night"],
+        "myth_tags": ["spiritual_flux"]
+      }
+    },
+    {
+      "ref": "rune_sentinel.json",
+      "zone_id": "zone_tower",
+      "x": 11,
+      "y": 0,
+      "z": 11,
+      "orientation": 90,
+      "conditions": {
+        "active_quest": "tower_riddle"
+      }
+    }
+  ],
+  "elements": [
+    {
+      "ref": "portal_to_root",
+      "position": [4, 0, 2],
+      "metadata": {
+        "to_zone_id": "zone_root",
+        "label": "Return to Village"
+      }
+    },
+    {
+      "ref": "arcane_altar",
+      "position": [6, 0, 6],
+      "metadata": {
+        "effect": "imbue_magic",
+        "label": "Altar of Arcana"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "arcane_blast",
+  "type": "active",
+  "npc_only": true,
+  "core": "projectile",
+  "form": "beam",
+  "essence": "arcane",
+  "modifiers": ["pierce"],
+  "effects": [
+    {
+      "type": "damage",
+      "element": "arcane",
+      "amount": 30,
+      "shape": {
+        "type": "line",
+        "length": 10,
+        "width": 1
+      }
+    }
+  ],
+  "cooldown": 5,
+  "cost": {
+    "mana": 20
+  },
+  "range": 10,
+  "tags": ["ranged", "npc", "burst"],
+  "description": "Fires a beam of arcane energy in a line, damaging everything in its path.",
+  "visuals": {
+    "effect": "arcane_projectile"
+  }
+}

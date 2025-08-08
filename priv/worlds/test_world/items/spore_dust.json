@@ -1,0 +1,11 @@
+{
+  "id": "spore_dust",
+  "type": "crafting",
+  "rarity": "rare",
+  "stack_size": 50,
+  "description": "Fine powder used in enchantments and potions.",
+  "tags": [
+    "dust",
+    "crafting"
+  ]
+}

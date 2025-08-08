@@ -1,0 +1,10 @@
+{
+  "id": "twine",
+  "type": "material",
+  "rarity": "common",
+  "stack_size": 99,
+  "description": "Basic crafting component made from fibers.",
+  "tags": [
+    "crafting"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "resilience_thread",
+  "description": "Increases durability",
+  "effects": {
+    "on_schema": {
+      "stat_bonus": {
+        "armor_mult": 1.1
+      },
+      "notes": "Increases armor value of equipped armor"
+    },
+    "on_equipment": {
+      "modifiers": {
+        "damage_reduction": 0.05
+      },
+      "notes": "Slightly reduces incoming damage"
+    }
+  },
+  "tags": [
+    "defense",
+    "durability"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "torch_slam",
+  "source": "npc",
+  "type": "active",
+  "core": "melee",
+  "form": "slam",
+  "essence": "fire",
+  "modifiers": ["burn", "knockback"],
+  "cooldown": 6,
+  "range": 1.5,
+  "area": {
+    "type": "cone",
+    "radius": 2.5,
+    "angle": 90
+  },
+  "effects": {
+    "damage": {
+      "type": "fire",
+      "amount": 35
+    },
+    "status": {
+      "apply": "burn",
+      "duration": 4
+    },
+    "secondary": {
+      "apply": "knockback",
+      "strength": 2
+    }
+  },
+  "tags": ["npc", "melee", "aoe", "fire"]
+}

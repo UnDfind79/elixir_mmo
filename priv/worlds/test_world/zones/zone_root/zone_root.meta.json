@@ -1,0 +1,70 @@
+{
+  "zone_id": "zone_root",
+  "name": "Root Village",
+  "tags": ["default_starting_zone", "safe", "settlement"],
+  "type": "safe",
+  "discoverable": true,
+  "seed": 101,
+  "weather": ["sunny", "dusk"],
+  "music": "town_theme",
+  "lights": ["lamps"],
+  "quests": ["starter_quest"],
+  "dialogs": ["quest_giver_1_dialog"],
+  "terrain": {
+    "overrides": []
+  },
+  "noise": {
+    "ground": {
+      "octaves": 2,
+      "scale": 0.4
+    },
+    "structure": {
+      "octaves": 3,
+      "scale": 0.9
+    }
+  },
+  "entities": [
+    {
+      "ref": "quest_giver_1.json",
+      "zone_id": "zone_root",
+      "x": 2,
+      "y": 0,
+      "z": 4,
+      "orientation": 0,
+      "overrides": {
+        "name": "Elder Rowan",
+        "dialog_id": "quest_giver_1_dialog"
+      }
+    },
+    {
+      "ref": "vendor_general.json",
+      "zone_id": "zone_root",
+      "x": 3,
+      "y": 0,
+      "z": 1,
+      "orientation": 0,
+      "overrides": {
+        "name": "Vendor Lysa",
+        "inventory": ["potion", "sword"]
+      }
+    }
+  ],
+  "elements": [
+    {
+      "ref": "basic_portal_to_cave",
+      "position": [7, 0, 2],
+      "metadata": {
+        "to_zone_id": "zone_cave",
+        "label": "Enter the Cave"
+      }
+    },
+    {
+      "ref": "basic_portal_to_tower",
+      "position": [5, 0, 5],
+      "metadata": {
+        "to_zone_id": "zone_tower",
+        "label": "Climb the Tower"
+      }
+    }
+  ]
+}

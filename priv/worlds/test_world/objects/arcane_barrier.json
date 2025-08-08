@@ -1,0 +1,22 @@
+{
+  "id": "arcane_barrier",
+  "type": "barrier",
+  "activation_rules": {
+    "requires_item": "ancient_key",
+    "cooldown": 10
+  },
+  "event_handlers": {
+    "on_activate": "play_animation('dissolve')",
+    "on_failed_activate": "play_sound('locked')"
+  },
+  "visual_overrides": {
+    "sprite": "arcane_barrier_glow",
+    "emissive": true
+  },
+  "flags": {
+    "blocking": true
+  },
+  "metadata": {
+    "linked_portal": "inner_sanctum"
+  }
+}

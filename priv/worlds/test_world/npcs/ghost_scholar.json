@@ -1,0 +1,25 @@
+{
+  "id": "ghost_scholar",
+  "type": "npc",
+  "family": "spirit_entities",
+  "name": "Scholar Mire",
+  "hostile": false,
+  "interactions": [
+    {
+      "type": "dialog",
+      "target": "arcane_echoes_dialog"
+    }
+  ],
+  "appearance": {
+    "model": "npcs/ghost_scholar.glb",
+    "animation_set": "ghost_float"
+  },
+  "behavior": {
+    "wander": false,
+    "phasing": true,
+    "visibility_conditions": {
+      "time": ["night"],
+      "myth_tags": ["spiritual_flux"]
+    }
+  }
+}

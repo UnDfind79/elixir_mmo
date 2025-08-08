@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.2",
+  "zone_id": "zone_root",
+  "default_starting_zone": true,
+  "layers": [
+    {
+      "layer_id": 0,
+      "collisions": [
+        { "type": "box", "position": [0, 0], "size": [32, 1] },
+        { "type": "box", "position": [0, 31], "size": [32, 1] },
+        { "type": "box", "position": [0, 1], "size": [1, 30] },
+        { "type": "box", "position": [31, 1], "size": [1, 30] },
+        { "type": "box", "position": [10, 10], "size": [5, 1] }
+      ],
+      "movement_modifiers": [
+        { "type": "box", "position": [6, 6], "size": [2, 2], "modifier": 0.75 }
+      ],
+      "transition_zones": [
+        {
+          "type": "zone_link",
+          "target_zone": "zone_cave",
+          "entry_points": [[12, 10]]
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "anchor_id": "campfire_anchor_01",
+      "position": [8, 8],
+      "rotation": 0,
+      "footprint": "2x2",
+      "theme_tags": ["camp", "warm"],
+      "placement_group": "fire_pit"
+    },
+    {
+      "anchor_id": "crate_anchor_01",
+      "position": [14, 10],
+      "rotation": 270,
+      "footprint": "1x1",
+      "theme_tags": ["supplies", "wood"],
+      "placement_group": "cargo"
+    },
+    {
+      "anchor_id": "auction_house_anchor",
+      "position": [2, 4],
+      "rotation": 0,
+      "footprint": "5x5",
+      "theme_tags": ["commerce", "indoor"],
+      "placement_group": "building_large"
+    },
+    {
+      "anchor_id": "crafting_table_anchor",
+      "position": [3, 6],
+      "rotation": 0,
+      "footprint": "1x1",
+      "theme_tags": ["crafting", "workbench"],
+      "placement_group": "interactive_small"
+    }
+  ],
+  "structures": [
+    {
+      "id": "cave_entrance_a",
+      "position": [12, 10],
+      "rotation": 0,
+      "footprint": "4x3",
+      "entrances": [[12, 10]],
+      "collision_map": "auto",
+      "meta": {
+        "usage": "dungeon_entry",
+        "tags": ["natural", "linked"]
+      }
+    }
+  ],
+  "hooks": {
+    "schema_nodes": [
+      {
+        "id": "node_start",
+        "coords": [5, 5]
+      }
+    ],
+    "myth_triggers": ["start_blossom"],
+    "quest_starts": ["begin_journey"],
+    "mutation_points": [
+      { "tag": "zone_shift", "coords": [20, 20] }
+    ]
+  },
+  "faction_control": {
+    "owner": "faction_id_settlers",
+    "influence": 0.95
+  }
+}

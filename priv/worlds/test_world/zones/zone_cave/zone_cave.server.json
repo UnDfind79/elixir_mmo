@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.2",
+  "zone_id": "zone_cave",
+  "layers": [
+    {
+      "layer_id": 0,
+      "collisions": [
+        { "type": "box", "position": [0, 0], "size": [16, 1] },
+        { "type": "box", "position": [0, 15], "size": [16, 1] },
+        { "type": "box", "position": [0, 1], "size": [1, 14] },
+        { "type": "box", "position": [15, 1], "size": [1, 14] }
+      ],
+      "movement_modifiers": [
+        { "type": "box", "position": [4, 4], "size": [2, 2], "modifier": 0.6 },
+        { "type": "box", "position": [8, 8], "size": [1, 1], "modifier": 1.2 }
+      ],
+      "transition_zones": [
+        {
+          "target_layer": 1,
+          "entry_points": [[8, 8]],
+          "type": "ladder_up"
+        }
+      ]
+    },
+    {
+      "layer_id": 1,
+      "collisions": [
+        { "type": "box", "position": [0, 0], "size": [16, 1] },
+        { "type": "box", "position": [0, 15], "size": [16, 1] },
+        { "type": "box", "position": [0, 1], "size": [1, 14] },
+        { "type": "box", "position": [15, 1], "size": [1, 14] }
+      ],
+      "movement_modifiers": [
+        { "type": "circle", "center": [8, 8], "radius": 1.5, "modifier": 1.1 }
+      ],
+      "transition_zones": [
+        {
+          "target_layer": 0,
+          "entry_points": [[8, 8]],
+          "type": "ladder_down"
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "anchor_id": "log_anchor_01",
+      "position": [6, 10],
+      "rotation": 90,
+      "footprint": "2x1",
+      "theme_tags": ["fungus", "log"],
+      "placement_group": "natural_debris"
+    },
+    {
+      "anchor_id": "herb_anchor_01",
+      "position": [3, 3],
+      "rotation": 0,
+      "footprint": "1x1",
+      "theme_tags": ["herb", "natural"],
+      "placement_group": "plant_small"
+    }
+  ],
+  "structures": [],
+  "faction_control": {
+    "owner": "faction_id_goblins",
+    "influence": 0.6
+  }
+}

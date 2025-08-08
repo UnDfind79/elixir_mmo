@@ -1,0 +1,17 @@
+{
+  "id": "obsidian_helm",
+  "slot": "head",
+  "armor": 5,
+  "encumbrance": 3,
+  "stat_modifiers": {
+    "max_health": 15,
+    "resist_fire": 0.1
+  },
+  "augment_slots": 1,
+  "quality": "rare",
+  "tags": [
+    "defensive",
+    "resist",
+    "crafted"
+  ]
+}

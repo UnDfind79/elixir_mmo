@@ -1,0 +1,14 @@
+{
+  "id": "crafting_table",
+  "type": "static",
+  "footprint": "1x1",
+  "collision_shape": {
+    "type": "box",
+    "width": 1,
+    "height": 1
+  },
+  "theme_tags": ["crafting", "workbench"],
+  "placement_group": "interactive_small",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/crafting_table.glb"
+}

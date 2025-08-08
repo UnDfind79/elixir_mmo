@@ -1,0 +1,12 @@
+{
+  "id": "green_leaf",
+  "type": "ingredient",
+  "rarity": "common",
+  "stack_size": 99,
+  "description": "A common leaf used in simple remedies.",
+  "tags": [
+    "herb",
+    "alchemy",
+    "ingredient"
+  ]
+}

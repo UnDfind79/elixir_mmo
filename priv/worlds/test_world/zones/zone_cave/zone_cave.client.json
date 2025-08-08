@@ -1,0 +1,31 @@
+{
+  "zone_id": "zone_cave",
+  "terrain_mesh": "meshes/terrain/zone_cave.glb",
+  "structures": [],
+  "props": [
+    {
+      "anchor_id": "log_anchor_01",
+      "position": [6.0, 0.0, 10.0],
+      "rotation": 90,
+      "footprint": "2x1",
+      "placement_group": "natural_debris",
+      "theme_tags": ["fungus", "log"]
+    },
+    {
+      "anchor_id": "herb_anchor_01",
+      "position": [3.0, 0.0, 3.0],
+      "rotation": 0,
+      "footprint": "1x1",
+      "placement_group": "plant_small",
+      "theme_tags": ["herb", "natural"]
+    }
+  ],
+  "decor": {
+    "skybox": "cave_gloom",
+    "ambient_fx": ["dripping_water", "spore_particles"]
+  },
+  "nav_anchors": [
+    { "label": "ladder_up", "position": [8.0, 0.0, 8.0] },
+    { "label": "ladder_down", "position": [8.0, 3.0, 8.0] }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.1",
+  "zone_id": "zone_tower",
+  "layers": [
+    {
+      "layer_id": 0,
+      "collisions": [
+        { "type": "box", "position": [0, 0], "size": [20, 1] },
+        { "type": "box", "position": [0, 19], "size": [20, 1] },
+        { "type": "box", "position": [0, 1], "size": [1, 18] },
+        { "type": "box", "position": [19, 1], "size": [1, 18] },
+        { "type": "circle", "center": [10, 10], "radius": 2.0 }
+      ],
+      "movement_modifiers": [
+        { "type": "box", "position": [9, 9], "size": [2, 2], "modifier": 1.2 }
+      ],
+      "transition_zones": [
+        {
+          "type": "zone_link",
+          "target_zone": "zone_root",
+          "entry_points": [[2, 2]]
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "anchor_id": "pillar_anchor_01",
+      "position": [5, 5],
+      "rotation": 0,
+      "footprint": "1x1",
+      "theme_tags": ["stone", "support"],
+      "placement_group": "decor_tower"
+    },
+    {
+      "anchor_id": "scroll_table_anchor_01",
+      "position": [10, 10],
+      "rotation": 0,
+      "footprint": "2x1",
+      "theme_tags": ["arcane", "knowledge"],
+      "placement_group": "furniture_study"
+    }
+  ],
+  "structures": [
+    {
+      "id": "tower_stairwell_a",
+      "position": [3, 3],
+      "rotation": 0,
+      "footprint": "3x3",
+      "entrances": [[3, 3]],
+      "collision_map": "auto",
+      "meta": {
+        "usage": "vertical_transition",
+        "tags": ["stairs", "inner"]
+      }
+    }
+  ],
+  "hooks": {
+    "schema_nodes": [
+      {
+        "id": "tower_schema_1",
+        "coords": [6, 6]
+      }
+    ],
+    "myth_triggers": ["whispers"],
+    "quest_starts": ["tower_riddle"],
+    "mutation_points": [
+      { "tag": "arcane_disruption", "coords": [10, 10] }
+    ]
+  },
+  "faction_control": {
+    "owner": "faction_id_arcana",
+    "influence": 0.72
+  }
+}

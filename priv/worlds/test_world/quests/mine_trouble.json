@@ -1,0 +1,22 @@
+{
+  "id": "mine_trouble",
+  "title": "Trouble in the Mines",
+  "goals": [
+    "Defeat 5 goblins",
+    "Retrieve bronze_shard"
+  ],
+  "rewards": [
+    {
+      "type": "item",
+      "id": "healing_tonic"
+    }
+  ],
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "herb_patch",
+      "count": 3
+    }
+  ],
+  "zone": "root"
+}

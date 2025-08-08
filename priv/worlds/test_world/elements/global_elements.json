@@ -1,0 +1,50 @@
+{
+  "basic_portal": {
+    "type": "portal",
+    "target_zone": "zone_forest",
+    "target_position": [0, 0],
+    "flags": {
+      "bi_directional": true
+    }
+  },
+  "starter_chest": {
+    "type": "object",
+    "event_handlers": {
+      "on_open": "give_loot"
+    },
+    "metadata": {
+      "label": "Starter Chest"
+    }
+  },
+  "basic_portal_to_cave": {
+    "type": "portal",
+    "target_zone": "zone_cave",
+    "target_position": [1, 0]
+  },
+  "basic_portal_to_tower": {
+    "type": "portal",
+    "target_zone": "zone_tower",
+    "target_position": [1, 0]
+  },
+  "portal_to_root": {
+    "type": "portal",
+    "target_zone": "zone_root",
+    "target_position": [1, 0],
+    "flags": {
+      "show_on_map": true
+    }
+  },
+  "arcane_altar": {
+    "type": "object",
+    "activation_rules": {
+      "requires_mana": true
+    },
+    "event_handlers": {
+      "on_use": "apply_arcane_effect"
+    },
+    "metadata": {
+      "label": "Arcane Altar",
+      "glow": "blue"
+    }
+  }
+}

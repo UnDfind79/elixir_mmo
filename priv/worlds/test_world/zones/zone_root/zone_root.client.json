@@ -1,0 +1,39 @@
+{
+  "zone_id": "zone_root",
+  "terrain_mesh": "meshes/terrain/zone_root.glb",
+  "structures": [
+    {
+      "model": "structures/cave_entrance_a.glb",
+      "position": [12.0, 0.0, 10.0],
+      "rotation": 0,
+      "footprint": "4x3",
+      "tags": ["natural", "linked"]
+    }
+  ],
+  "props": [
+    {
+      "anchor_id": "campfire_anchor_01",
+      "position": [8.0, 0.0, 8.0],
+      "rotation": 0,
+      "footprint": "2x2",
+      "theme_tags": ["camp", "warm"],
+      "placement_group": "fire_pit"
+    },
+    {
+      "anchor_id": "crate_anchor_01",
+      "position": [14.0, 0.0, 10.0],
+      "rotation": 270,
+      "footprint": "1x1",
+      "theme_tags": ["supplies", "wood"],
+      "placement_group": "cargo"
+    }
+  ],
+  "decor": {
+    "skybox": "sunny_field",
+    "ambient_fx": ["leaf_fall", "dust_pollen"]
+  },
+  "nav_anchors": [
+    { "label": "start_node", "position": [5.0, 0.0, 5.0] },
+    { "label": "cave_entrance", "position": [12.0, 0.0, 10.0] }
+  ]
+}

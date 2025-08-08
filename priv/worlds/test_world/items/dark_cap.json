@@ -1,0 +1,11 @@
+{
+  "id": "dark_cap",
+  "type": "ingredient",
+  "rarity": "common",
+  "stack_size": 99,
+  "description": "A mushroom with strange properties.",
+  "tags": [
+    "fungus",
+    "ingredient"
+  ]
+}

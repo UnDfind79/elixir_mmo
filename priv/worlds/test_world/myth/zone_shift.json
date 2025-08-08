@@ -1,0 +1,16 @@
+{
+  "id": "zone_shift",
+  "active_in": [
+    "zone_root"
+  ],
+  "effects": {
+    "swap_layer": {
+      "from": 0,
+      "to": 1
+    },
+    "alter_collision": true
+  },
+  "triggers": [
+    "mutation_point:zone_shift"
+  ]
+}

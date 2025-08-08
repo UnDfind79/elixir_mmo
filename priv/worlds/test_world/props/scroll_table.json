@@ -1,0 +1,14 @@
+{
+  "id": "scroll_table",
+  "type": "static",
+  "footprint": "2x1",
+  "collision_shape": {
+    "type": "box",
+    "width": 2,
+    "height": 1
+  },
+  "theme_tags": ["arcane", "knowledge"],
+  "placement_group": "furniture_study",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/scroll_table.glb"
+}

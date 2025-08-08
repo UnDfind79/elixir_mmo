@@ -1,0 +1,41 @@
+{
+  "id": "quest_giver_1",
+  "type": "npc",
+  "family": "villager_human",
+  "variant": "farmer_elric",
+  "name": "Farmer Elric",
+  "role": "quest_giver",
+  "dialog_id": "quest_giver_1_dialog",
+  "quests": ["starter_quest"],
+  "interactions": [
+    {
+      "type": "dialog",
+      "target": "quest_giver_1_dialog"
+    },
+    {
+      "type": "quest",
+      "target": "starter_quest"
+    }
+  ],
+  "appearance": {
+    "model": "npcs/human_farmer_a.glb",
+    "skin": "light",
+    "outfit": "farmer",
+    "scale": 1.0
+  },
+  "behavior": {
+    "type": "static",
+    "schedule": [
+      {
+        "time": "day",
+        "location": "village_farm"
+      },
+      {
+        "time": "night",
+        "location": "village_home"
+      }
+    ]
+  },
+  "tags": ["villager", "friendly", "quest_source"],
+  "faction": "settlers"
+}

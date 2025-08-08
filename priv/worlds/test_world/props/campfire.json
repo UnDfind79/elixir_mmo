@@ -1,0 +1,13 @@
+{
+  "id": "campfire",
+  "type": "static",
+  "footprint": "2x2",
+  "collision_shape": {
+    "type": "circle",
+    "radius": 1.0
+  },
+  "theme_tags": ["camp", "warm"],
+  "placement_group": "fire_pit",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/campfire.glb"
+}

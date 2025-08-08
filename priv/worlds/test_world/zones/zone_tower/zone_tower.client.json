@@ -1,0 +1,39 @@
+{
+  "zone_id": "zone_tower",
+  "terrain_mesh": "meshes/terrain/zone_tower.glb",
+  "structures": [
+    {
+      "model": "structures/tower_stairwell_a.glb",
+      "position": [3.0, 0.0, 3.0],
+      "rotation": 0,
+      "footprint": "3x3",
+      "tags": ["stairs"]
+    }
+  ],
+  "props": [
+    {
+      "anchor_id": "pillar_anchor_01",
+      "position": [5.0, 0.0, 5.0],
+      "rotation": 0,
+      "footprint": "1x1",
+      "theme_tags": ["stone", "support"],
+      "placement_group": "decor_tower"
+    },
+    {
+      "anchor_id": "scroll_table_anchor_01",
+      "position": [10.0, 0.0, 10.0],
+      "rotation": 0,
+      "footprint": "2x1",
+      "theme_tags": ["arcane", "knowledge"],
+      "placement_group": "furniture_study"
+    }
+  ],
+  "decor": {
+    "skybox": "stormy_twilight",
+    "ambient_fx": ["arcane_glow", "spark_particles"]
+  },
+  "nav_anchors": [
+    { "label": "tower_entrance", "position": [2.0, 0.0, 2.0] },
+    { "label": "scroll_table", "position": [10.0, 0.0, 10.0] }
+  ]
+}

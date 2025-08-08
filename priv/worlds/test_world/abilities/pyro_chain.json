@@ -1,0 +1,41 @@
+{
+  "id": "pyro_chain",
+  "source": "schema",
+  "type": "active",
+  "core": "projectile",
+  "form": "chain",
+  "essence": "fire",
+  "modifiers": ["burn", "jumping_arc"],
+  "cooldown": 8,
+  "range": 10,
+  "chain": {
+    "max_jumps": 3,
+    "jump_radius": 5,
+    "damage_falloff": 0.8
+  },
+  "effects": {
+    "damage": {
+      "type": "fire",
+      "amount": 28
+    },
+    "status": {
+      "apply": "burn",
+      "duration": 5
+    }
+  },
+  "resonant_effects": {
+    "fire": {
+      "description": "Increases burn duration by 1.5s",
+      "effect": {
+        "burn_duration_mult": 1.3
+      }
+    },
+    "chain": {
+      "description": "Adds one additional jump target",
+      "effect": {
+        "max_jumps_add": 1
+      }
+    }
+  },
+  "tags": ["schema", "fire", "ranged", "chain", "aoe"]
+}

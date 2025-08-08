@@ -1,0 +1,22 @@
+{
+  "id": "herb_healer",
+  "title": "Healer\u2019s Herb Run",
+  "goals": [
+    "Collect 3 green_leaf",
+    "Return to Healer"
+  ],
+  "rewards": [
+    {
+      "type": "item",
+      "id": "healing_tonic"
+    }
+  ],
+  "objectives": [
+    {
+      "type": "collect",
+      "target": "herb_patch",
+      "count": 3
+    }
+  ],
+  "zone": "root"
+}

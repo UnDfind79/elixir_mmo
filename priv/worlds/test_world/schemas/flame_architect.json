@@ -1,0 +1,79 @@
+{
+  "id": "flame_architect",
+  "name": "Flame Architect",
+  "hexes": [
+    {
+      "id": "hex_1",
+      "position": [
+        0,
+        0
+      ],
+      "resonance": [
+        "fire",
+        "area"
+      ],
+      "adjacent_diamonds": [
+        "dia_1",
+        "dia_2"
+      ]
+    },
+    {
+      "id": "hex_2",
+      "position": [
+        2,
+        0
+      ],
+      "resonance": [
+        "fire"
+      ],
+      "adjacent_diamonds": [
+        "dia_2",
+        "dia_3"
+      ]
+    }
+  ],
+  "diamonds": [
+    {
+      "id": "dia_1",
+      "position": [
+        -1,
+        1
+      ],
+      "shared": false
+    },
+    {
+      "id": "dia_2",
+      "position": [
+        1,
+        1
+      ],
+      "shared": true
+    },
+    {
+      "id": "dia_3",
+      "position": [
+        3,
+        1
+      ],
+      "shared": false
+    }
+  ],
+  "bonuses": [
+    {
+      "type": "line",
+      "require": [
+        "hex_1",
+        "hex_2"
+      ],
+      "effect": {
+        "add_ability": "pyro_chain",
+        "description": "Unlocks Pyro Chain if both hexes are filled"
+      }
+    }
+  ],
+  "tags": [
+    "caster",
+    "fire",
+    "resonant"
+  ]
+}

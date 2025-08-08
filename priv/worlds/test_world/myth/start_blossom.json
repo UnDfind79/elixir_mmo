@@ -1,0 +1,16 @@
+{
+  "id": "start_blossom",
+  "active_in": [
+    "zone_root"
+  ],
+  "effects": {
+    "enable_entity": [
+      "blossom_node"
+    ],
+    "visual_overlay": "bloom"
+  },
+  "triggers": [
+    "season_spring",
+    "quest:begin_journey_started"
+  ]
+}

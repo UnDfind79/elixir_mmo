@@ -1,0 +1,14 @@
+{
+  "id": "wood_crate",
+  "type": "static",
+  "footprint": "1x1",
+  "collision_shape": {
+    "type": "box",
+    "width": 1,
+    "height": 1
+  },
+  "theme_tags": ["supplies", "wood"],
+  "placement_group": "cargo",
+  "rotation_modes": [0, 90, 180, 270],
+  "client_asset": "props/wood_crate.glb"
+}

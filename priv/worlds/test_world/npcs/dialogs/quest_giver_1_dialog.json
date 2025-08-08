@@ -1,0 +1,23 @@
+{
+  "start": {
+    "text": "Welcome, traveler! Are you here to help the village?",
+    "options": [
+      {
+        "text": "Yes, what can I do?",
+        "next": "accept"
+      },
+      {
+        "text": "No thanks.",
+        "next": "end"
+      }
+    ]
+  },
+  "accept": {
+    "text": "Take this starter quest and speak with the trader.",
+    "quest": "starter_quest",
+    "next": "end"
+  },
+  "end": {
+    "text": "Good luck!"
+  }
+}

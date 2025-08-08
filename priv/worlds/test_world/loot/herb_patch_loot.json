@@ -1,0 +1,17 @@
+{
+  "id": "herb_patch_loot",
+  "entries": [
+    {
+      "item": "green_leaf",
+      "chance": 0.75,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "item": "bitter_root",
+      "chance": 0.5,
+      "min": 1,
+      "max": 1
+    }
+  ]
+}
