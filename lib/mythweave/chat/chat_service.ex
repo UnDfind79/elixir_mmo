@@ -62,10 +62,10 @@ defmodule Mythweave.Chat.ChatService do
   def handle_command("/help", player_id) do
     send_system(player_id, """
     🧠 Available chat commands:
-      /who           - List online players
-      /zone          - Show current zone
-      /roll          - Roll a 1–100
-      /emote [text]  - Perform an emote
+/who           - List online players
+/zone          - Show current zone
+/roll          - Roll a 1–100
+/emote [text]  - Perform an emote
     """)
   end
 

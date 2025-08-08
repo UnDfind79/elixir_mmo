@@ -8,8 +8,6 @@ defmodule Mythweave.UI.MessageDispatcher do
     - Support future multi-channel output (whisper, zone, group)
   """
 
-  import Kernel, except: [send: 2]
-
   alias Mythweave.UI.SystemMessage
   alias Mythweave.Player.Registry
 

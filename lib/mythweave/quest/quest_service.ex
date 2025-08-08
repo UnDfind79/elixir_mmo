@@ -13,6 +13,7 @@ defmodule Mythweave.Quest.QuestService do
     - `conditions` :: map of goals (e.g., kills, delivery, zone visit)
   """
 
+  alias Mythweave.Quest.QuestState
 
   @type quest_id :: String.t()
   @type quest :: %{

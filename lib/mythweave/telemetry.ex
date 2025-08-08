@@ -11,14 +11,6 @@ defmodule Mythweave.Telemetry do
   use GenServer
   require Logger
 
-  @spec start_link(any()) :: GenServer.on_start()
-  def start_link(init_arg \\ %{}) do
-    GenServer.start_link(__MODULE__, init_arg, name: __MODULE__)
-  end
-
-  @impl true
-  def init(init_arg), do: {:ok, init_arg}
-
   @spec emit(atom(), map()) :: :ok
   def emit(event, payload) do
     Logger.info("[Telemetry] #{event} - #{inspect(payload)}")

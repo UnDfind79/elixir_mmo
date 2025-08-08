@@ -25,13 +25,10 @@ defmodule Mythweave.Engine.EventBus do
     Registry.start_link(keys: :duplicate, name: @registry)
   end
 
-  @impl true
-  def init(init_arg), do: {:ok, init_arg}
-
   @doc """
   Subscribes the calling process to a given topic.
   """
-  @spec subscribe(topic()) :: {:ok, term()} | {:error, term()}
+  @spec subscribe(topic()) :: {:ok, term()}
   def subscribe(topic) do
     Registry.register(@registry, topic, [])
   end

@@ -26,7 +26,7 @@ defmodule Mythweave.Engine.TickLoop do
   end
 
   @impl true
-  def init(_state) do
+  def init(state) do
     tick_rate = Config.get(:tick_rate, 100)
     Logger.info("🚀 TickLoop started at #{tick_rate}ms intervals")
 

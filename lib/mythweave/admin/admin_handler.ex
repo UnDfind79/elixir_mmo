@@ -11,6 +11,7 @@ defmodule Mythweave.Admin.AdminHandler do
   """
 
   alias Mythweave.Player.Registry, as: PlayerRegistry
+  alias Mythweave.World.ZoneServer
   alias Mythweave.Logging.AuditLog
   alias Mythweave.Engine.EventBus
 

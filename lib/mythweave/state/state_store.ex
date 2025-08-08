@@ -27,7 +27,7 @@ defmodule Mythweave.State.StateStore do
   def load_world_state do
     case Repo.get(WorldSnapshot, @global_snapshot_id) do
       nil ->
-        Logger.warning("WorldState not found in DB (id=#{@global_snapshot_id})")
+        Logger.warn("WorldState not found in DB (id=#{@global_snapshot_id})")
         nil
 
       %WorldSnapshot{data: data} ->

@@ -6,7 +6,7 @@ defmodule Mythweave.Logging.AuditLog do
     - Persist high-impact actions like bans, zone crashes, or gold changes
     - Support structured logs with metadata
     - Enable inspection or export for moderation or forensic tools
-  """
+    """
 
   require Logger
 
@@ -33,7 +33,7 @@ defmodule Mythweave.Logging.AuditLog do
   end
 
   defp log(%{category: :security} = entry) do
-    Logger.warning("[SECURITY] #{entry.message}", entry.meta)
+    Logger.warn("[SECURITY] #{entry.message}", entry.meta)
   end
 
   defp log(%{category: :admin_action} = entry) do
@@ -48,7 +48,7 @@ defmodule Mythweave.Logging.AuditLog do
     Logger.debug("[SYSTEM] #{entry.message}", entry.meta)
   end
 
-  defp persist(_entry) do
+  defp persist(entry) do
     # Placeholder: Integrate with database, ETS, or file-based storage
     # File.append or :ets.insert(:audit_log, entry) could be future hooks
     :ok

@@ -3,7 +3,7 @@ defmodule Mythweave.Networking.SocketChannel do
   WebSocket handler for player communication using Phoenix Channels.
 
   Responsibilities:
-    - Joins player-specific topics (e.g., `"player:\#{id}"`)
+    - Joins player-specific topics (e.g., `"player:#{id}"`)
     - Registers active connections with `ConnectionManager`
     - Forwards messages to `MessageRouter`
     - Handles cleanup on disconnect
@@ -26,7 +26,7 @@ defmodule Mythweave.Networking.SocketChannel do
   @impl true
   def join("player:" <> player_id, _params, socket) do
     ConnectionManager.register(player_id, self())
-    {:ok, Phoenix.Socket.assign(socket, :player_id, player_id)}
+    {:ok, assign(socket, :player_id, player_id)}
   end
 
   @impl true
@@ -58,7 +58,7 @@ defmodule Mythweave.Networking.SocketChannel do
   defp log_unhandled(event, payload, socket) do
     require Logger
 
-    Logger.warning("""
+    Logger.warn("""
     [⚠️ Unrouted Message]
     ▸ Event: #{inspect(event)}
     ▸ Payload: #{inspect(payload)}

@@ -19,7 +19,7 @@ defmodule Mythweave.Auth.AuthSocketHandler do
     case AuthService.login(username, password) do
       {:ok, %{player_id: player_id, token: token}} ->
         Logger.info("Login successful", username: username, player_id: player_id)
-        {:reply, {:ok, %{player_id: player_id, token: token}}, Phoenix.Socket.assign(socket, :player_id, player_id)}
+        {:reply, {:ok, %{player_id: player_id, token: token}}, assign(socket, :player_id, player_id)}
 
       {:error, reason} ->
         Logger.warn("Login failed", username: username, reason: reason)
@@ -31,7 +31,7 @@ defmodule Mythweave.Auth.AuthSocketHandler do
     case AuthService.refresh(token) do
       {:ok, %{player_id: player_id}} ->
         Logger.info("Token refreshed", player_id: player_id)
-        {:reply, {:ok, %{player_id: player_id}}, Phoenix.Socket.assign(socket, :player_id, player_id)}
+        {:reply, {:ok, %{player_id: player_id}}, assign(socket, :player_id, player_id)}
 
       {:error, reason} ->
         Logger.warn("Token refresh failed", reason: reason)

@@ -14,6 +14,7 @@ defmodule Mythweave.Networking.MessageRouter do
 
   alias Mythweave.Auth.AuthSocketHandler
   alias Mythweave.Chat.ChatChannel
+  alias Mythweave.Engine.EventBus
 
   @type payload :: map()
   @type socket :: Phoenix.Socket.t()
@@ -33,7 +34,7 @@ defmodule Mythweave.Networking.MessageRouter do
   # Chat Messages
   # -----------------------------
 
-  def route("chat", %{"text" => _text} = payload, socket) do
+  def route("chat", %{"text" => text} = payload, socket) do
     # 🧠 Future: route slash commands differently from chat messages
     ChatChannel.handle_in("chat", payload, socket)
   end
@@ -43,7 +44,7 @@ defmodule Mythweave.Networking.MessageRouter do
   # -----------------------------
 
   def route(msg_type, _payload, socket) do
-    Logger.warning("Unhandled WebSocket message: #{msg_type}")
+    Logger.warn("Unhandled WebSocket message: #{msg_type}")
     send(socket.transport_pid, {:warning, "Unknown message: #{msg_type}"})
     :noreply
   end

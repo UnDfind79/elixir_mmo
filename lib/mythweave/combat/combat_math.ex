@@ -55,8 +55,8 @@ defmodule Mythweave.Combat.CombatMath do
     1.0 + (:rand.uniform() * @variance - @variance / 2)
   end
 
-  defp clamp(val, min, _max) when val < min, do: min
-  defp clamp(val, _min, max) when val > max, do: max
+  defp clamp(val, min, max) when val < min, do: min
+  defp clamp(val, min, max) when val > max, do: max
   defp clamp(val, _, _), do: val
 
   # -------------------------

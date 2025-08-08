@@ -49,7 +49,7 @@ defmodule Mythweave.Security.RateLimiter do
   end
 
   @impl true
-  def handle_info(:tick, _state) do
+  def handle_info(:tick, state) do
     schedule_tick()
     {:noreply, %{}}
   end

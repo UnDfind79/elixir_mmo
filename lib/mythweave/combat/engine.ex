@@ -9,6 +9,8 @@ defmodule Mythweave.Combat.Engine do
   """
 
   alias Mythweave.Combat.Ability
+  alias Mythweave.Combat.StatusEffects
+  alias Mythweave.World.Visibility
   alias Mythweave.EventBus
 
   @type entity_id :: String.t()

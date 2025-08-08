@@ -10,6 +10,7 @@ defmodule Mythweave.AI.Nodes.Seek do
 
   alias Mythweave.NPC.NPCServer
   alias Mythweave.World.ZoneServer
+  alias Mythweave.Utils.Vector
 
   @type context :: %{
           npc_id: String.t(),

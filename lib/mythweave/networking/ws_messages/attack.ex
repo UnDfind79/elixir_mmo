@@ -22,7 +22,7 @@ defmodule Mythweave.Networking.WSMessages.Attack do
   def handle(%__MODULE__{target_id: tid}, player_id) do
     with {:ok, attacker} <- PlayerState.get(player_id),
          {:ok, defender} <- PlayerState.get(tid),
-         {:ok, _updated_defender} <- CombatEngine.attack(attacker, defender) do
+         {:ok, updated_defender} <- CombatEngine.attack(attacker, defender) do
       {:ok, %{damage: attacker.stats.attack, target: tid}}
     else
       _ -> {:error, :invalid_combat}

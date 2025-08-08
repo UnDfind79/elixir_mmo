@@ -10,7 +10,8 @@ defmodule Mythweave.Ability.Ability do
   """
 
   alias Mythweave.Loader.AbilityLoader
-  alias Mythweave.Combat.{Formulas}
+  alias Mythweave.Combat.{Formulas, StatusEffects}
+  alias Mythweave.Engine.EventBus
 
   @type entity_id :: String.t()
   @type ability_id :: String.t()

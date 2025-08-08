@@ -9,6 +9,7 @@ defmodule Mythweave.Security.Validator do
   """
 
   alias Mythweave.Loader.AbilityLoader
+  alias Mythweave.World.Terrain
 
   @spec valid_move?({integer(), integer()}) :: boolean()
   def valid_move?({x, y}) do

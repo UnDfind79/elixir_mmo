@@ -63,7 +63,7 @@ defmodule Mythweave.Scheduler.EventScheduler do
   end
 
   defp dispatch({type, data}) do
-    Logger.warning("Unhandled scheduled event: #{inspect({type, data})}")
+    Logger.warn("Unhandled scheduled event: #{inspect({type, data})}")
     :ok
   end
 

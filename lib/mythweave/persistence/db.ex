@@ -12,26 +12,26 @@ defmodule Mythweave.Persistence.DB do
   @type schema :: module()
   @type changeset :: Ecto.Changeset.t()
   @type clauses :: keyword()
-  @type db_struct :: Ecto.Schema.t()
+  @type struct :: Ecto.Schema.t()
   @type queryable :: Ecto.Queryable.t()
 
   # -----------------------------
   # Basic Query Execution
   # -----------------------------
 
-  @spec get_by(schema(), clauses()) :: db_struct() | nil
+  @spec get_by(schema(), clauses()) :: struct() | nil
   def get_by(schema, clauses),
     do: Repo.get_by(schema, clauses)
 
-  @spec insert(changeset()) :: {:ok, db_struct()} | {:error, Ecto.Changeset.t()}
+  @spec insert(changeset()) :: {:ok, struct()} | {:error, Ecto.Changeset.t()}
   def insert(changeset),
     do: Repo.insert(changeset)
 
-  @spec update(changeset()) :: {:ok, db_struct()} | {:error, Ecto.Changeset.t()}
+  @spec update(changeset()) :: {:ok, struct()} | {:error, Ecto.Changeset.t()}
   def update(changeset),
     do: Repo.update(changeset)
 
-  @spec delete(db_struct()) :: {:ok, db_struct()} | {:error, term()}
+  @spec delete(struct()) :: {:ok, struct()} | {:error, term()}
   def delete(struct),
     do: Repo.delete(struct)
 

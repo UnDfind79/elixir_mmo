@@ -56,15 +56,8 @@ defmodule Mythweave.Auth.SessionRegistry do
   @impl true
   def handle_call({:whereis, player_id}, _from, state) do
     case Map.fetch(state, player_id) do
-      {:ok, pid} when is_pid(pid) ->
-        if Process.alive?(pid) do
-          {:reply, {:ok, pid}, state}
-        else
-          {:reply, :error, Map.delete(state, player_id)}
-        end
-
-      _ ->
-        {:reply, :error, Map.delete(state, player_id)}
+      {:ok, pid} when Process.alive?(pid) -> {:reply, {:ok, pid}, state}
+      _ -> {:reply, :error, Map.delete(state, player_id)}
     end
   end
 

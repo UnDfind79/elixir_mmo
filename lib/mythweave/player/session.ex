@@ -9,6 +9,7 @@ defmodule Mythweave.Player.Session do
   """
 
   alias Mythweave.Player.Registry
+  alias Mythweave.World.ZoneServer
   alias Mythweave.Combat.Engine
 
   @type payload :: map()
@@ -21,7 +22,7 @@ defmodule Mythweave.Player.Session do
   end
 
   @spec handle_move(pid(), payload()) :: :ok
-  def handle_move(_socket_pid, %{"player_id" => id, "pos" => pos}) do
+  def handle_move(socket_pid, %{"player_id" => id, "pos" => pos}) do
     with {:ok, pid} <- Registry.lookup(id) do
       send(pid, {:move, pos})
       :ok

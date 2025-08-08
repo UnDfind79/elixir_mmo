@@ -10,6 +10,7 @@ defmodule Mythweave.Quest.QuestEvents do
   This module is the entry point for event-based progression.
   """
 
+  alias Mythweave.Quest.{QuestState, QuestService}
 
   @type player_id :: String.t()
   @type mob_id :: String.t()

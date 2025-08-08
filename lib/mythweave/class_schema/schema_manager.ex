@@ -6,9 +6,10 @@ defmodule Mythweave.ClassSchema.SchemaManager do
     - Track active schema per player
     - Allow switching between stored schema profiles
     - Provide lookup for thread sets by active schema
-  """
+    """
 
   alias Mythweave.ClassSchema.SchemaLoader
+  alias Mythweave.ClassSchema.ThreadHash
   alias Mythweave.UI.MessageDispatcher
 
   @type player_id :: String.t()

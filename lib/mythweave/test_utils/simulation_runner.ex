@@ -35,7 +35,7 @@ defmodule Mythweave.TestUtils.SimulationRunner do
   Simulates simple behavior for a given player PID.
   """
   @spec simulate_behavior(pid(), atom()) :: :ok
-  def simulate_behavior(_pid, :idle), do: :ok
+  def simulate_behavior(pid, :idle), do: :ok
 
   def simulate_behavior(pid, :wander) do
     Task.start(fn -> loop_wander(pid) end)
