@@ -1,0 +1,42 @@
+name: Refactor and PR
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1,4"
+
+jobs:
+  refactor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.18.4'
+          otp-version: '27.0.1'
+
+      - run: mix local.hex --force && mix local.rebar --force
+      - run: mix deps.get
+      - run: mix compile || true
+
+      - name: Run mechanical refactors
+        run: mix mythweave.refactor
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(refactor): mechanical refactors (logger/assign/send)"
+          title: "Mechanical refactors: logger/assign/send"
+          body: |
+            Automated refactors:
+            - Logger.warn -> Logger.warning
+            - Qualify assign/3 -> Phoenix.Socket.assign/3
+            - Add `import Kernel, except: [send: 2]` when def send/2 exists
+            Notes:
+            - Illegal guards with Process.alive?/1 are reported but not auto-fixed.
+          branch: "automation/refactors"
+          delete-branch: true
